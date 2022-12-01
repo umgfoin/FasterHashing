@@ -162,7 +162,6 @@ namespace FasterHashing
                 case LibraryName.libcrypto_1_1_x64_dll:
                     return OpenSSL11_libcrypto_1_1_x64_dll_HashAlgorithm.Create(algorithm);
 
-                //case LibraryName.libssl3:
                 default:
                     return OpenSSL11_libssl_HashAlgorithm.Create(algorithm);
             }
@@ -188,7 +187,6 @@ namespace FasterHashing
                 case LibraryName.libcrypto_1_1_x64_dll:
                     return Marshal.PtrToStringAnsi(InteropOpenSSL11_libcrypto_1_1_x64_dll.OpenSSL_version());
 
-                //case LibraryName.libssl3:
                 default:
                    return Marshal.PtrToStringAnsi(InteropOpenSSL11_libssl.OpenSSL_version());
             }
